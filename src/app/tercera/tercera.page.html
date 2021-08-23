@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>tercera pagina</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>  
+    <ion-item color="secondary">
+      <ion-label>Opción 1</ion-label>
+    </ion-item>
+    <ion-item color="danger">
+      <ion-label>Opción 2</ion-label>
+    </ion-item>
+    <ion-item color="warning">
+      <ion-label>Opción 3</ion-label>
+    </ion-item>  
+    <ion-item href="https://www.google.cl" target="_blank">
+      <ion-label>ir Google</ion-label>
+    </ion-item>    
+  </ion-list>
+  <br>
+  <ion-button (click)="onClick()" expand="block" fill="clear" shape="round">
+    Click me
+  </ion-button>
+</ion-content>
