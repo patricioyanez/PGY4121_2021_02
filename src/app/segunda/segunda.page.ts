@@ -6,10 +6,35 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./segunda.page.scss'],
 })
 export class SegundaPage implements OnInit {
+  //atributos  // ts = typeScript
+  nombre  : string;
+  edad    : number;
+  lista   : [];
+  listado : [
+    {
+      id      : '1',
+      nombre  : 'Juan',
+      apellido: 'Perez'
+    },
+    {
+      id      : '2',
+      nombre  : 'Juana',
+      apellido: 'Arce'
+    },
+    {
+      id      : '3',
+      nombre  : 'Ana',
+      apellido: 'Diaz'
+    }
+  ]
 
-  constructor() { }
+  constructor() {
+    this.nombre = "Alexander";
+    this.edad = 15;
+  }
 
   ngOnInit() {
   }
+  // métodos o eventos
 
 }
