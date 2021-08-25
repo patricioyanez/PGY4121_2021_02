@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>ingreso de notas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<h1 class="ion-text-center">¿Me salvo del examen?</h1>
+<ion-input type="number" placeholder="Nota1" #nota1></ion-input>
+<ion-input type="number" placeholder="Nota2" #nota2></ion-input>
+<ion-input type="number" placeholder="Nota3" #nota3></ion-input>
+<br>
+<ion-button (click)="promediar(nota1,nota2,nota3)" expand="block" fill="clear" shape="round">
+  Promediar
+</ion-button>
+<ion-text color="primary" *ngIf="promedio>=55; else debeRendirExamen">
+  <h1>No rinde examen :)</h1>
+</ion-text>
+<ng-template #debeRendirExamen><h1 color="danger">Ud debe rendir el examen</h1>
+</ng-template>
+</ion-content>
