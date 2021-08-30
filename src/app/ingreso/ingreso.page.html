@@ -10,12 +10,62 @@
 <ion-input type="number" placeholder="Nota2" #nota2></ion-input>
 <ion-input type="number" placeholder="Nota3" #nota3></ion-input>
 <br>
-<ion-button (click)="promediar(nota1,nota2,nota3)" expand="block" fill="clear" shape="round">
+
+<ion-grid fixed>
+  <ion-row>
+    <ion-col size="4">
+      Ponderación nota 1
+    </ion-col>
+    <ion-col size="7">
+      <ion-text >
+        <ion-input type="number" placeholder="ponderación 1" #pon1></ion-input>
+      </ion-text>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="4">
+      Ponderación nota 2
+    </ion-col>
+    <ion-col size="7">
+      <ion-text >
+        <ion-input type="number" placeholder="ponderación 2" #pon2></ion-input>
+      </ion-text>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="4">
+      Ponderación nota 3
+    </ion-col>
+    <ion-col size="7">
+      <ion-text >
+        <ion-input type="number" placeholder="ponderación 3" #pon3></ion-input>
+      </ion-text>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<ion-button (click)="promediar(nota1,nota2,nota3,pon1,pon2,pon3)" expand="block" fill="clear" shape="round">
   Promediar
 </ion-button>
-<ion-text color="primary" *ngIf="promedio>=55; else debeRendirExamen">
-  <h1>No rinde examen :)</h1>
-</ion-text>
-<ng-template #debeRendirExamen><h1 color="danger">Ud debe rendir el examen</h1>
-</ng-template>
+<div *ngIf="promedio;">
+   <ion-text color="success" *ngIf="promedio>=40; else reprobado">
+     <h1>Aprobó: {{promedio}}</h1>
+   </ion-text>
+   <ng-template #reprobado>
+    <ion-text color="danger">
+      <h1 class="ion-text-center" >reprobó {{promedio}}</h1>
+  </ion-text>
+  </ng-template>
+  <ion-text color="primary" *ngIf="promedio>=55; else debeRendirExamen">
+    <h1 class="ion-text-center" >No rinde examen :)</h1>
+  </ion-text>
+  <ng-template #debeRendirExamen>
+    <ion-text color="danger">
+      <h1 class="ion-text-center" >Ud debe rendir el examen</h1>
+  </ion-text>
+  </ng-template>
+</div>
+
+
+
 </ion-content>
