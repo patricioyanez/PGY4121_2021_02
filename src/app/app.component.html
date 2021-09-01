@@ -1,3 +1,24 @@
 <ion-app>
+  <ion-menu side="start" contentId="principal" menuId="first">
+
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Menú de inicio</ion-title>
+      </ion-toolbar>
+    </ion-header>
+  
+    <ion-content>
+      <ion-list>
+        <ion-item>Gatos</ion-item>
+        <ion-item>Perros</ion-item>
+        <ion-item>Pájaros</ion-item>
+        <ion-item>Hurones</ion-item>
+        <ion-item>Osos</ion-item>
+      </ion-list>
+    </ion-content>
+  
+  </ion-menu>
+  
+  <ion-menu side="start" menuId="principal" class="my-custom-menu">
   <ion-router-outlet></ion-router-outlet>
 </ion-app>

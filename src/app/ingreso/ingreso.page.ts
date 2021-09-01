@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class IngresoPage implements OnInit {
   promedio : number;
   aux : number;
+  valor :number;
   constructor() { }
 
   ngOnInit() {
@@ -28,4 +29,9 @@ export class IngresoPage implements OnInit {
     this.promedio = n1 + n2 + n3;
 
   }
+  informacion()
+  {
+    return this.valor;
+  }
+
 }

@@ -1,5 +1,8 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
     <ion-title>ingreso de notas</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -43,7 +46,7 @@
     </ion-col>
   </ion-row>
 </ion-grid>
-
+{{1+1}}
 <ion-button (click)="promediar(nota1,nota2,nota3,pon1,pon2,pon3)" expand="block" fill="clear" shape="round">
   Promediar
 </ion-button>
@@ -56,6 +59,8 @@
       <h1 class="ion-text-center" >reprobó {{promedio}}</h1>
   </ion-text>
   </ng-template>
+
+
   <ion-text color="primary" *ngIf="promedio>=55; else debeRendirExamen">
     <h1 class="ion-text-center" >No rinde examen :)</h1>
   </ion-text>
@@ -65,7 +70,16 @@
   </ion-text>
   </ng-template>
 </div>
+<!-- -->
+<ion-text color="secondary">
+  <h1>El resultado es: {{1+1}}</h1>
+  <h1>El resultado es: {{informacion()+1}}</h1>
+</ion-text>
 
+<ion-input type="number" [(ngModel)]="valor"  placeholder="Awesome Input"></ion-input>
 
+<ion-text color="primary">
+  <h1>{{valor*1.19}}</h1>
+</ion-text>
 
 </ion-content>
