@@ -30,7 +30,9 @@ export class LugaresService {
   constructor() { }
   // CRUD
 
-  getPlayas(){ return this.playas;}
+  getPlayas(){
+    console.table(this.playas);
+    return this.playas;}
 
   getPlaya(id: number)
   {

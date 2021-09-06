@@ -11,7 +11,7 @@ export class PlayasPage implements OnInit {
 
   ngOnInit() {
     // traspasar los datos del servicio al atributo
-    this.playas = this.lugaresService.getPlayas()
+    this.playas = this.lugaresService.getPlayas();
   }
 
 }
