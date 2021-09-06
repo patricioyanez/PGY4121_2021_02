@@ -31,7 +31,7 @@ export class LugaresService {
   // CRUD
 
   getPlayas(){
-    console.table(this.playas);
+    //console.table(this.playas);
     return this.playas;}
 
   getPlaya(id: number)

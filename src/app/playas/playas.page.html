@@ -5,5 +5,16 @@
 </ion-header>
 
 <ion-content>
-{{ playas }}
+
+  <ion-list>
+    <div *ngFor="let playa of playas" [routerLink]="['/', playa.id]">
+      <ion-item>
+        <ion-avatar slot="start">
+          <img [src]="playa.imagenUrl" />
+        </ion-avatar>
+        <ion-label>{{playa.nombre}}</ion-label>
+      </ion-item>
+    </div>
+  </ion-list>
+
 </ion-content>

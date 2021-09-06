@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalle de la playa</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="playa"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12">
+        <ion-img [src]="playa.imagenUrl"></ion-img>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="5">
+        <ion-text color="primary">
+          <h2>Nombre</h2>
+        </ion-text>
+      </ion-col>
+      <ion-col size="7">
+        <ion-text color="secondary">
+          <h2>{{playa.nombre}}</h2>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="5">
+        <ion-text color="primary">
+          <h2>Comentario</h2>
+        </ion-text>
+      </ion-col>
+      <ion-col size="7">
+        <ion-text color="secondary">
+          <h2>{{playa.comentario}}</h2>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+
+
+  </ion-grid>
+<hr>
+
+</ion-content>
