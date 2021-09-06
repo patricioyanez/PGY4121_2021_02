@@ -12,9 +12,14 @@
         <ion-avatar slot="start">
           <img [src]="playa.imagenUrl" />
         </ion-avatar>
-        <ion-label>{{playa.nombre}}</ion-label>
+        <ion-label>{{playa.nombre | titlecase }}</ion-label>
       </ion-item>
     </div>
   </ion-list>
 
 </ion-content>
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button color="danger" type="button" (click)="agregar()">
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
