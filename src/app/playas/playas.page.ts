@@ -17,6 +17,11 @@ export class PlayasPage implements OnInit {
     // traspasar los datos del servicio al atributo
     this.playas = this.lugaresService.getPlayas();
   }
+  ionViewWillEnter()
+  {
+    this.playas = this.lugaresService.getPlayas();
+  }
+
   agregar()
   {
     this.router.navigate(['/agregar'])

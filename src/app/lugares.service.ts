@@ -38,7 +38,10 @@ export class LugaresService {
   {
     return this.playas.find(x=> {return x.id == id}) 
   }
-
+  deletePlaya(id:number)
+  {
+    this.playas = this.playas.filter(x => { return x.id != id})
+  }
   addPlaya(nombre: string, imagenUrl: string, comentario:string)
   {
     this.playas.push(
@@ -49,9 +52,4 @@ export class LugaresService {
         comentario: comentario
     })
   }
-  deletePlaya(id:number)
-  {
-    this.playas = this.playas.filter(x => { return x.id != id})
-  }
-
 }

@@ -1,9 +1,34 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>agregar</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="playas"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Agregar nueva playa</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-text color="primary" class="ion-text-center">
+    <h1>Registro de playa</h1>
+  </ion-text>
 
+  <ion-item>
+    <ion-label>Nombre del lugar</ion-label>
+    <ion-input placeholder="ej: Porto seguro" #nombre></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">url de la imagen</ion-label>
+    <ion-input #url></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Comentario</ion-label>
+    <ion-textarea placeholder="Ej: especifique características del lugar" #comentario></ion-textarea>
+  </ion-item>
+
+  <br><br>
+  <ion-button (click)="guardar(nombre, url, comentario)" expand="block" shape="round">
+    Guardar
+  </ion-button>
 </ion-content>

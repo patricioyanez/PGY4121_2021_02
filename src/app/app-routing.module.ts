@@ -28,12 +28,12 @@ const routes: Routes = [
     loadChildren: () => import('./playas/playas.module').then( m => m.PlayasPageModule)
   },
   {
-    path: ':id',
-    loadChildren: () => import('./detalle/detalle.module').then( m => m.DetallePageModule)
-  },
-  {
     path: 'agregar',
     loadChildren: () => import('./agregar/agregar.module').then( m => m.AgregarPageModule)
+  },
+  {
+    path: ':id',
+    loadChildren: () => import('./detalle/detalle.module').then( m => m.DetallePageModule)
   },
 ];
 

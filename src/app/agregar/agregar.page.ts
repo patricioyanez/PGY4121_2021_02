@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+// se debe importar el servicio para utilizarlo
+import { LugaresService }from '../lugares.service';
+// permite enviar al usuario a otra pagina 
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-agregar',
@@ -7,9 +11,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AgregarPage implements OnInit {
 
-  constructor() { }
+  constructor(private lugaresService : LugaresService,
+              private router : Router
+  ) { }
 
   ngOnInit() {
   }
+  guardar(nombre: HTMLInputElement , 
+          url: HTMLInputElement , 
+          comentario: HTMLInputElement )
+  {
+    const nom = nombre.value;
+    const img = url.value;
+    const com = comentario.value;
 
+    this.lugaresService.addPlaya(nom, img, com);
+    this.router.navigate(['/playas']);
+
+
+  }
 }
